@@ -10,10 +10,11 @@
 /* VARIÁVEIS DE ESTILO */
 :root{
     --verde: #C7DFC5;
-    --amarelo: #FCE694;
-    --azul: #9ACCDC;
+    --verde-florescente: #35E68E;
+    --azul: #0056FF;
     --cinza: #373737;
-    --branco: #f0f0f0;
+    --branco: #ffffff;
+    --branco-escuro: #f0f0f0;
 }
 /* ESTILO DA SCROLLBAR */
 /* BARRA INTEIRA */
@@ -35,7 +36,7 @@
 
 #header{
     width: 100%;
-    height: 65px;
+    height: 80px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -69,18 +70,18 @@
 #header .btn-idioma .icone-idioma{
     width: 20%;
     height: 100%;
-    background-color: var(--verde);
-    padding: 0.15rem;
+    background-color: var(--azul);
+    padding: 0.20rem;
 }
 #header .btn-idioma select{
     width: 80%;
     height: 100%;
-    /* background-color: transparent; */
+    background-color: var(--cinza);
     border: none;
     padding-left: 0.5rem;
     font-size: 14px;
     font-weight: 500;
-    color: var(--cinza);
+    color: var(--branco);
     outline: none;
     cursor: pointer;
     /* appearance: none;
@@ -91,13 +92,13 @@
     border: none;
 }
 #header .btn-idioma select option:hover{
-    background-color: var(--verde);
+    background-color: var(--azul);
 }
 
 #header .btn-tema{
-    width: 30%;
+    width: 40%;
     height: 95%;
-    background-color: var(--verde);
+    background-color: var(--azul);
     border-radius: 100px;
     cursor: pointer;
     display: flex;
@@ -116,23 +117,23 @@
     justify-content: center;
 }
 #header .btn-tema .icone-tema{
-    width: 20px;
-    height: 20px;
+    width: 90%;
+    height: 90%;
     /* background-color: var(--cinza); */
     border-radius: 50%;
 }
 
 /* ESTILOS LOGO */
 #header .logo{
-    width: 17%;
-    height: 100%;
+    width: 20%;
+    height: 95%;
     transform: translateX(-50%);
 }
 
 /* ESTILOS MENU */
 #header .menu{
-    width: 30px;
-    height: 30px;
+    width: 35px;
+    height: 35px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -200,7 +201,7 @@ main #banner-inicial .intro .titulo h1{
 main #banner-inicial .intro .titulo hr{
     width: 50%;
     margin-left: 1rem;
-    border: 1px solid var(--azul);
+    border: 1px solid var(--branco);
     /* transition: all 0.5s; */
     animation: hr-move 10s infinite alternate;
 }
@@ -241,7 +242,7 @@ main #banner-inicial .redes a:hover{
 
 /* SESSÃO SOBRE */
 main #sobre{
-    height: 210vh;
+    height: 228vh;
     display: flex;
     align-items: center;
     justify-content: start;
@@ -265,15 +266,20 @@ main #sobre article .paragrafos{
     flex-direction: column;
     gap: 2rem;
 }
-main #sobre article .titulo-sessao, h2{
-    font-size: 2rem;
+main #sobre article .titulo-sessao, h1{
+    font-size: 3rem;
     color: var(--cinza);
     font-weight: 700;
+}
+main #sobre h2{
+    font-size: 2rem;
+    color: var(--cinza);
+    font-weight: 600;
 }
 main #sobre article hr{
     width: 80%;
     margin: 0 auto;
-    border: 1px solid var(--verde);
+    border: 1px solid var(--verde-florescente);
 }
 main #sobre article .texto-sobre{
     width: 100%;
@@ -326,7 +332,7 @@ main #sobre .equipe .membros::-webkit-scrollbar-thumb{
     background-color: var(--azul);
 }
 main #sobre .equipe .membros .membro{
-    width: 18%;
+    width: 20%;
     height: 95%;
     display: flex;
     align-items: end;
@@ -459,7 +465,7 @@ main #sobre .pilares-cultura .card-info .titulo{
     padding-right: 30px;
     margin-right: 30px;
 
-    border-right: 1px solid #c8c8c8;
+    border-right: 1px solid var(--verde-florescente);
 }
 
 main #sobre .pilares-cultura .card-info .titulo h3{
@@ -517,14 +523,14 @@ main #sobre .pilares-cultura .card-largo{
         width: 50%;
     }
 }
-/* SESSAO ESPECIALIDADES */
-.secao-especialidades {
+/* SESSAO SERVIÇOS */
+.sessao-servicos {
     background-color: #fff; 
     width: 100%;
-    min-height: 90vh;
+    min-height: 100vh;
 }
 .section-title {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     color: #333;
     background-color: #fff;
     display: inline-block;
@@ -537,7 +543,7 @@ main #sobre .pilares-cultura .card-largo{
     width: 100%;
     padding: 2rem 5rem 2rem 5rem;
 }
-.especialidades-banner {
+.servicos-banner {
     background-color: #000000; 
     border-radius: 15px;      
     padding: 60px 0;                
@@ -547,22 +553,22 @@ main #sobre .pilares-cultura .card-largo{
     justify-content: center;
     align-items: center;
 }
-.especialidades-banner h1 {
+.servicos-banner h1 {
     font-family: 'Afacad Flux', sans-serif; 
     color: #ffffff;
     font-size: 3rem;
     font-weight: 500; 
 }
-.grade-especialidades {
+.grade-servicos {
     width: 100%;
-    height: 100%;
+    height: 110vh;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1rem;
+    gap: 0.8rem;
     padding: 2.5rem 1rem;
-    background-color: #C7DFC5;
+    background: linear-gradient(to bottom, var(--verde-florescente), #59E49B, #AADEA6 54%,  var(--verde));
 }
-.cartao-especialidade {
+.cartao-servico {
     background-color: #ffffff;
     border-radius: 4px;
     padding: 2rem 1rem;
@@ -572,12 +578,12 @@ main #sobre .pilares-cultura .card-largo{
     align-items: center;
     transition: transform 0.3s ease;
 }
-.cartao-especialidade:hover {
+.cartao-servico:hover {
     transform: translateY(-5px);
 }
 .caixa-icone {
-    width: 175px;  
-    height: 175px; 
+    width: 52%;  
+    height: 35%; 
     background-color: #C7DFC5; 
     border-radius: 100%;
     display: flex;
@@ -590,10 +596,10 @@ main #sobre .pilares-cultura .card-largo{
     height: 60%; 
     object-fit: contain;
 }
-.cartao-especialidade h3 {
+.cartao-servico h3 {
     font-family: 'Afacad Flux', sans-serif;
     font-size: 2rem;
-    color: #222222;
+    color: var(--cinza);
     margin-bottom: 15px;
     font-weight: 700;
     text-align: center;
@@ -601,26 +607,30 @@ main #sobre .pilares-cultura .card-largo{
     display: flex;
     flex-direction: column;
     align-items: center;    
+    margin-top: 1rem;
 }
-.cartao-especialidade h3::after {
-    content: '';
-    display: block;
-    width: 100px;
-    height: 2px;
-    background-color: var(--amarelo); 
+.cartao-servico hr{
+    width: 25%;
+    border: 2px solid var(--verde-florescente);
 }
-.cartao-especialidade p {
+.cartao-servico ul{
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 3.5rem;
+    gap: 3rem;
+}
+.cartao-servico li {
     font-family: 'Afacad Flux', sans-serif;
     font-size: 1.5rem;
     color: var(--cinza); 
     line-height: 1.5;
-    margin-top: 3rem;
-    text-align: left;
+    text-align: justify;
     font-weight: 500;
-    padding: 0 0.5rem;
+    word-spacing: -1px;
 }
 
-/*footer*/
+/* FOOTER */
 .rodape-principal {
     width: 100%;
     font-family: 'Afacad Flux', sans-serif;
