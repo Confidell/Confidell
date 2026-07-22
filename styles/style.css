@@ -634,7 +634,7 @@ main #sobre .pilares-cultura .card-largo{
 
 .rodape {
     width: 100%;
-    background: #fff;
+    background: #F8F8F8;
     margin-top: 50px;
 }
 
@@ -688,4 +688,110 @@ main #sobre .pilares-cultura .card-largo{
 
 .links-rodape a:hover {
     color: #1E88E5;
+}
+
+/* CONTATO */
+
+.banner-contato{
+    height:400px;
+    background:url("../assets/images/Banner-shaolin.jpg") center/cover no-repeat;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.banner-contato h1{
+    color:#fff;
+    font-size:60px;
+    font-weight:700;
+}
+
+.opcoes-contato{
+    text-align:center;
+    padding:60px 20px;
+}
+
+.opcoes-contato h2{
+    font-size:42px;
+    color:#333;
+    margin-bottom:40px;
+}
+
+.botoes-contato{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    flex-wrap:wrap;
+}
+
+.botoes-contato a{
+    background:#35E68E;
+    color:#fff;
+    text-decoration:none;
+    padding:18px 40px;
+    border-radius:30px;
+    font-size:22px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.botoes-contato a:hover{
+    background:#35E68E;
+}
+
+.informacoes-contato{
+    display:flex;
+    justify-content:space-between;
+    padding:70px 100px;
+    background:#fff;
+    flex-wrap:wrap;
+    gap:40px;
+}
+
+.contato-esquerda,
+.contato-direita{
+    flex:1;
+    min-width:300px;
+}
+
+.contato-esquerda h3,
+.contato-direita h3{
+    font-size:32px;
+    margin-bottom:35px;
+}
+
+.contato-esquerda span,
+.contato-direita span{
+    color:#005CFF;
+}
+
+.item-contato{
+    margin-bottom:25px;
+}
+
+.item-contato strong{
+    display:block;
+    margin-bottom:8px;
+    font-size:18px;
+}
+
+.item-contato p{
+    font-size:24px;
+    font-weight:bold;
+}
+
+.horarios{
+    display:flex;
+    gap:50px;
+}
+
+.horarios strong{
+    display:block;
+    margin-bottom:10px;
+    font-size:18px;
+}
+
+.horarios p{
+    font-size:22px;
+    font-weight:bold;
 }
