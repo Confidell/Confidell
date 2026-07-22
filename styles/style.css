@@ -631,111 +631,61 @@ main #sobre .pilares-cultura .card-largo{
 }
 
 /* FOOTER */
-.rodape-principal {
+
+.rodape {
     width: 100%;
-    font-family: 'Afacad Flux', sans-serif;
+    background: #fff;
+    margin-top: 50px;
 }
 
+.rodape-conteudo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px 20px;
+}
 
-.rodape-topo {
-    background: color #F8F8F8;
+.logo {
+    width: 600px;
+    max-width: 100%;
+    height: auto;
+}
+
+.direitos {
+    margin-top: 15px;
+    font-size: 18px;
+    color: #444;
     text-align: center;
-    padding: 40px 20px;
 }
 
-.rodape-logo {
-    font-size: 4rem;
-    font-weight: 700;
-    color: #2F2F2F; 
-    letter-spacing: 2px;
-    margin: 0;
-}
-
-
-.logo-destaque {
-    color: #515151; 
-}
-
-.rodape-direitos {
-    font-size: 1.2rem;
-    color: #515151;
-    margin-top: 10px;
-}
-
-.rodape-links-container {
-    background-color: #2F2F2F; 
-    color: #ffffff;
-    padding: 20px 50px;
+.rodape-inferior {
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-
-.rodape-esquerda {
-    display: flex;
-    flex-direction: column;
+    background: #333;
+    padding: 18px 35px;
+    flex-wrap: wrap;
     gap: 15px;
 }
 
-.rodape-menu {
+.informacoes {
+    color: #fff;
+    font-size: 15px;
+}
+
+.links-rodape {
     display: flex;
-    gap: 15px;
+    gap: 25px;
 }
 
-.rodape-menu a {
-    color: #ffffff;
-    text-decoration: underline;
-    font-size: 1.1rem;
+.links-rodape a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px;
+    transition: 0.3s;
 }
 
-.rodape-sociais {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    font-size: 1.1rem;
+.links-rodape a:hover {
+    color: #1E88E5;
 }
-
-
-.icones-redes {
-    display: flex;
-    gap: 12px;
-}
-
-.icones-redes img {
-    width: 24px;
-    height: 24px;
-    object-fit: contain;
-    transition: transform 0.2s ease;
-}
-
-.icones-redes img:hover {
-    transform: scale(1.1); 
-}
-
-
-.rodape-centro {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.mascote-footer {
-    height: 50px;
-    object-fit: contain;
-}
-
-
-.rodape-direita {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 10px;
-    font-size: 1rem;
-    text-align: right;
-}
-
-.rodape-direita p {
-    margin: 0;
-}
-
