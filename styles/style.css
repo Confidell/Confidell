@@ -239,6 +239,45 @@ main #banner-inicial .redes a:hover{
     animation: none;
     scale: 1.1;
 }
+/* ANIMAÇÕES SESSAO INICIAL */
+@keyframes horizontal-float {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-3px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+@keyframes hr-move {
+    0% {
+        margin-left: 15%;
+        width: 50%;
+        border: 2px solid var(--verde-florescente);
+    }
+    25% {
+        margin-left: 0%;
+        width: -20%;
+        border: 2px solid var(--azul);
+    }
+    50% {
+        margin-left: 100%;
+        width: 0%;
+        border: 2px solid var(--azul);
+    }
+    75% {
+        margin-left: 0%;
+        width: -20%;
+        border: 2px solid var(--verde-florescente);
+    }
+    100% {
+        margin-left: 15%;
+        width: 50%;
+        border: 2px solid var(--verde);
+    }
+}
 
 /* SESSÃO SOBRE */
 main #sobre{
@@ -489,47 +528,18 @@ main #sobre .pilares-cultura .card-largo{
     height: 140%;
 }
 
-/* ANIMAÇÕES SESSAO INICIAL */
-@keyframes horizontal-float {
-    0% {
-        transform: translateX(0);
-    }
-    50% {
-        transform: translateX(-3px);
-    }
-    100% {
-        transform: translateX(0);
-    }
-}
-@keyframes hr-move {
-    0% {
-        margin-left: 15%;
-        width: 50%;
-    }
-    25% {
-        margin-left: 0%;
-        width: -20%;
-    }
-    50% {
-        margin-left: 100%;
-        width: 0%;
-    }
-    75% {
-        margin-left: 0%;
-        width: -20%;
-    }
-    100% {
-        margin-left: 15%;
-        width: 50%;
-    }
-}
 /* SESSAO SERVIÇOS */
 .sessao-servicos {
+    position: relative;
     background-color: #fff; 
     width: 100%;
-    min-height: 100vh;
+    height: 130vh;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
 }
-.section-title {
+/* .section-title {
     font-size: 2.5rem;
     color: #333;
     background-color: #fff;
@@ -538,17 +548,19 @@ main #sobre .pilares-cultura .card-largo{
     margin-bottom: 40px;
     border-radius: 4px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
+} */
 .container {
     width: 100%;
-    padding: 2rem 5rem 2rem 5rem;
+    height: 30vh;
+    position: relative;
+    padding: 2rem 4rem 2rem 4rem;
 }
 .servicos-banner {
     background-color: #000000; 
     border-radius: 15px;      
-    padding: 60px 0;                
-    width: 100%;               
-    text-align: center;        
+    width: 100%;     
+    height: 100%;          
+    text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -560,12 +572,13 @@ main #sobre .pilares-cultura .card-largo{
     font-weight: 500; 
 }
 .grade-servicos {
+    position: relative;
     width: 100%;
-    height: 110vh;
+    height: 100vh;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 0.8rem;
-    padding: 2.5rem 1rem;
+    gap: 1rem;
+    padding: 2rem 1rem;
     background: linear-gradient(to bottom, var(--verde-florescente), #59E49B, #AADEA6 54%,  var(--verde));
 }
 .cartao-servico {
@@ -582,7 +595,7 @@ main #sobre .pilares-cultura .card-largo{
     transform: translateY(-5px);
 }
 .caixa-icone {
-    width: 52%;  
+    width: 48%;  
     height: 35%; 
     background-color: #C7DFC5; 
     border-radius: 100%;
@@ -592,8 +605,8 @@ main #sobre .pilares-cultura .card-largo{
     margin-bottom: 25px;
 }
 .icone-servico {
-    width: 60%;  
-    height: 60%; 
+    width: 50%;  
+    height: 50%; 
     object-fit: contain;
 }
 .cartao-servico h3 {
@@ -617,8 +630,8 @@ main #sobre .pilares-cultura .card-largo{
     width: 85%;
     display: flex;
     flex-direction: column;
-    margin-top: 3.5rem;
-    gap: 3rem;
+    margin-top: 4.5rem;
+    gap: 2rem;
 }
 .cartao-servico li {
     font-family: 'Afacad Flux', sans-serif;
@@ -630,70 +643,14 @@ main #sobre .pilares-cultura .card-largo{
     word-spacing: -1px;
 }
 
-/* FOOTER */
-
-.rodape {
-    width: 100%;
-    background: #F8F8F8;
-    margin-top: 50px;
-}
-
-.rodape-conteudo {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 40px 20px 20px;
-}
-
-.logo {
-    width: 600px;
-    max-width: 100%;
-    height: auto;
-}
-
-.direitos {
-    margin-top: 15px;
-    font-size: 18px;
-    color: #444;
-    text-align: center;
-}
-
-.rodape-inferior {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #333;
-    padding: 18px 35px;
-    flex-wrap: wrap;
-    gap: 15px;
-}
-
-.informacoes {
-    color: #fff;
-    font-size: 15px;
-}
-
-.links-rodape {
-    display: flex;
-    gap: 25px;
-}
-
-.links-rodape a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 15px;
-    transition: 0.3s;
-}
-
-.links-rodape a:hover {
-    color: #1E88E5;
-}
-
 /* CONTATO */
+.contato{
+    width: 100%;
+    height: 150vh;
+}
 
 .banner-contato{
-    height:400px;
+    height:50vh;
     background:url("../assets/images/Banner-shaolin.jpg") center/cover no-repeat;
     display:flex;
     justify-content:center;
@@ -706,30 +663,36 @@ main #sobre .pilares-cultura .card-largo{
     font-weight:700;
 }
 
-.opcoes-contato{
-    text-align:center;
-    padding:60px 20px;
+.titulo-contato{
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 3rem;
 }
 
-.opcoes-contato h2{
-    font-size:42px;
+.titulo-contato h2{
+    width: 500px;
+    font-size: 3rem;
     color:#333;
-    margin-bottom:40px;
+    text-align: center;
+    line-height: 3.2rem;
 }
 
-.botoes-contato{
+.adesivos-contato{
     display:flex;
     justify-content:center;
     gap:25px;
     flex-wrap:wrap;
 }
 
-.botoes-contato a{
+.adesivos-contato p{
     background:#35E68E;
     color:#fff;
     text-decoration:none;
-    padding:18px 40px;
-    border-radius:30px;
+    padding: 10px 40px;
+    border-radius: 50px;
     font-size:22px;
     font-weight:bold;
     transition:.3s;
@@ -740,24 +703,25 @@ main #sobre .pilares-cultura .card-largo{
 }
 
 .informacoes-contato{
+    width: 100%;
+    height: 50vh;
     display:flex;
-    justify-content:space-between;
-    padding:70px 100px;
-    background:#fff;
-    flex-wrap:wrap;
-    gap:40px;
+    align-items: center;
+    justify-content: space-between;
+    padding:0 5rem;
+    background:#FCFCFC;
 }
 
 .contato-esquerda,
 .contato-direita{
-    flex:1;
-    min-width:300px;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
 }
 
 .contato-esquerda h3,
 .contato-direita h3{
-    font-size:32px;
-    margin-bottom:35px;
+    font-size: 2.25rem;
 }
 
 .contato-esquerda span,
@@ -765,33 +729,103 @@ main #sobre .pilares-cultura .card-largo{
     color:#005CFF;
 }
 
+.item-contato h4,
+.horarios h4{
+    font-size: 18px;
+    font-weight: 400;
+    margin-left: 5px;
+}
 .item-contato{
-    margin-bottom:25px;
+    display: flex; 
+    gap: 5rem;
 }
-
-.item-contato strong{
-    display:block;
-    margin-bottom:8px;
-    font-size:18px;
-}
-
-.item-contato p{
-    font-size:24px;
+.item-contato a{
+    font-size: 24px;
     font-weight:bold;
+    color: #373737;
+    text-decoration: none;
+    position: relative;
+}
+.item-contato a::after{
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 1.5px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--verde-florescente);
+    transition: width 0.3s ease-in-out;
+}
+.item-contato a:hover::after{
+    width: 100%;
 }
 
 .horarios{
     display:flex;
-    gap:50px;
+    gap: 5rem;
 }
-
-.horarios strong{
-    display:block;
-    margin-bottom:10px;
-    font-size:18px;
-}
-
 .horarios p{
-    font-size:22px;
+    font-size: 24px;
     font-weight:bold;
+}
+
+/* FOOTER */
+.rodape {
+    width: 100%;
+    height: 40vh;
+    background: #F8F8F8;
+}
+.rodape-conteudo {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.logo {
+    width: 50%;
+    max-width: 100%;
+    height: auto;
+}
+.direitos {
+    margin-top: 15px;
+    font-size: 18px;
+    color: #444;
+    text-align: center;
+}
+.rodape-inferior {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #333;
+    padding: 0 2rem;
+}
+.informacoes {
+    color: #fff;
+    font-size: 1rem;
+}
+.links-rodape {
+    display: flex;
+    gap: 1.7rem;
+}
+.links-rodape a{
+    color: var(--branco);
+    text-decoration: none;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+.links-rodape a:hover {
+    color: #1E88E5;
+}
+.redes-rodape{
+    display: flex;
+    gap: 5px;
+}
+.redes-rodape a:hover{
+    transform: scale(1.1);
+    transition: 0.3s;
 }
