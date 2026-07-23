@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" style="scroll-behavior: smooth;">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -33,12 +33,33 @@
 
         <img src="assets/icons/Logo_Confidell.svg" alt="Logo da Confidell" class="logo" loading="lazy">
 
-        <div class="menu"></div>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="menu">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 9h16.5m-16.5 6.75h16.5" />
+        </svg>
+
+        <!-- <div class="menu"></div> -->
     </header>
+    <!-- MENU NAVEGAÇÃO -->
+    <menu class="menubar">
+
+        <nav>
+            <ul>
+                <li><a href="#inicio">INÍCIO</a></li>
+                <li><a href="#sobre">QUEM SOMOS</a></li>
+                <li><a href="#servicos">SERVIÇOS</a></li>
+                <li><a href="#projetos">PROJETOS</a></li>
+                <li><a href="#contato">CONTATO</a></li>
+            </ul>
+        </nav>
+
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="close-btn">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+        </svg>
+    </menu>
     <!-- CONTEUDO PRINCIPAL -->
     <main>
         <!-- SESSÃO INICIAL - BANNER -->
-        <section id="banner-inicial">
+        <section id="inicio">
 
             <!-- <img class="banner" src="./assets/images/Banner-inicio.jpg" alt="inicio"> -->
 
@@ -92,59 +113,59 @@
                 
                 <div class="membros">
 
-                    <div class="membro">
+                    <a href="" class="membro">
                         <img src="/assets/images/Imagem-Teste.png" alt="Foto do membro 1" loading="lazy">
                         <p>Laura Valentine Xavier</p>
-                    </div>
-                    <div class="membro">
+                    </a>
+                    <a href="" class="membro">
                         <img src="/assets/images/Imagem-Teste.png" alt="Foto do membro 2" loading="lazy">
                         <p>Giovanna Soares do Nascimento</p>
-                    </div>
-                    <div class="membro">
+                    </a>
+                    <a href="" class="membro">
                         <img src="/assets/images/Imagem-Teste.png" alt="Foto do membro 3" loading="lazy">
                         <p>Samuel Barbosa Santos</p>
-                    </div>
-                    <div class="membro">
+                    </a>
+                    <a href="" class="membro">
                         <img src="/assets/images/Imagem-Teste.png" alt="Foto do membro 4" loading="lazy">
                         <p>Guilherme Silva</p>
-                    </div>
-                    <div class="membro">
+                    </a>
+                    <a href="" class="membro">
                         <img src="/assets/images/Imagem-Teste.png" alt="Foto do membro 2" loading="lazy">
                         <p>Luiz Henrique Araujo Farias</p>
-                    </div>
+                    </a>
 
-                    <div class="membro">
+                    <a href="" class="membro">
                         <img src="/assets/images/Imagem-Teste.png" alt="Foto do membro 3" loading="lazy">
                         <p>Sarah</p>
-                    </div>
-                    <div class="membro">
+                    </a>
+                    <a href="" class="membro">
                         <img src="/assets/images/Imagem-Teste.png" alt="Foto do membro 4" loading="lazy">
                         <p>Lorena</p>
-                    </div>
-                    <div class="membro">
+                    </a>
+                    <a href="" class="membro">
                         <img src="/assets/images/Imagem-Teste.png" alt="Foto do membro 2" loading="lazy">
                         <p>Pietro</p>
-                    </div>
-                    <div class="membro">
+                    </a>
+                    <a href="" class="membro">
                         <img src="/assets/images/Imagem-Teste.png" alt="Foto do membro 3" loading="lazy">
                         <p>Enzo</p>
-                    </div>
-                    <div class="membro">
+                    </a>
+                    <a href="" class="membro">
                         <img src="/assets/images/Imagem-Teste.png" alt="Foto do membro 3" loading="lazy">
                         <p>Victor Mussato</p>
-                    </div>
+                    </a>
 
                 </div>
 
                 <div class="botoes-equipe">
 
-                    <button id="anterior">
+                    <button id="anterior-equipe" class="anterior">
 
                         &#10094;
 
                     </button>
 
-                    <button id="proximo">
+                    <button id="proximo-equipe" class="proximo">
 
                         &#10095;
 
@@ -221,7 +242,7 @@
         </section>
         
         <!-- SESSAO SERVIÇOS -->
-        <section class="sessao-servicos">
+        <section class="sessao-servicos" id="servicos">
 
             <div class="cabecalho-servicos">
 
@@ -298,7 +319,7 @@
         </section>
 
         <!-- PROJETOS -->
-        <section class="projetos">
+        <section class="projetos" id="projetos">
 
             <div class="cabecalho-projetos">
 
@@ -318,9 +339,9 @@
                 </div>
             </div>
 
-            <div class="grade-projetos">
+            <div class="grade-projetos" >
 
-                <div class="card-projeto">
+                <div class="card-projeto" >
 
                     <div class="conteudo-card">
 
@@ -337,7 +358,8 @@
                             <a
                                 href="#"
                                 class="botao-visitar"
-                                id="botao-projeto">
+                                id="botao-projeto"
+                                target="_blank">
 
                                 Visitar
 
@@ -357,21 +379,21 @@
                     <div class="controles-projeto">
                         <div class="indicadores">
 
-                            <span class="indicador ativo"></span>
+                            <!-- <span class="indicador ativo"></span>
                             <span class="indicador"></span>
-                            <span class="indicador"></span>
+                            <span class="indicador"></span> -->
 
                         </div>
 
                         <div class="botoes-carrossel">
 
-                            <button id="anterior">
+                            <button id="anterior-proj" class="anterior">
 
                                 &#10094;
 
                             </button>
 
-                            <button id="proximo">
+                            <button id="proximo-proj" class="proximo">
 
                                 &#10095;
 
@@ -384,13 +406,13 @@
         </section>
 
         <!-- CONTATOS -->
-        <section class="contato">
+        <section class="contato" >
 
             <div class="banner-contato">
                 <!-- <h1>FALE CONOSCO</h1> -->
             </div>
 
-            <div class="titulo-contato">
+            <div class="titulo-contato" id="contato">
 
                 <h2>CONTATE-NOS PARA</h2>
 
@@ -402,7 +424,7 @@
 
             </div>
 
-            <div class="informacoes-contato">
+            <div class="informacoes-contato" >
 
                 <div class="contato-esquerda">
                     <h3>EQUIPE <span>CONFIDELL</span></h3>
@@ -471,4 +493,7 @@
         </div>
     </footer>
 </body>
+<script src="./js/index.js"></script>
+<script src="./js/projetos.js"></script>
+
 </html>
