@@ -6,6 +6,7 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'Afacad Flux', sans-serif;
+    /* border: 1px solid black; */
 }
 /* VARIÁVEIS DE ESTILO */
 :root{
@@ -40,12 +41,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #fff;
+    background-color: #fcfcfc;
     padding-left: 2rem;
     padding-right: 2rem;
     position: fixed;
     z-index: 100;
-    box-shadow: 0px 1px 4px #00000030;
+    /* box-shadow: 0px 1px 4px #00000030; */
 }
 
 /* ESTILOS BOTOES IDIOMA E TEMA */
@@ -58,7 +59,7 @@
     gap: 1rem;
 }
 #header .btn-idioma{
-    width: 70%;
+    width: 80%;
     height: 100%;
     /* background-color: var(--cinza); */
     display: flex;
@@ -66,6 +67,7 @@
     justify-content: start;
     overflow: hidden;
     border-radius: 4px;
+    position: relative;
 }
 #header .btn-idioma .icone-idioma{
     width: 20%;
@@ -84,10 +86,18 @@
     color: var(--branco);
     outline: none;
     cursor: pointer;
-    /* appearance: none;
+    appearance: none;
     -webkit-appearance: none;
-    -moz-appearance: none; */
+    -moz-appearance: none;
 }
+#header .btn-idioma .select-arrow{
+    width: 1.5rem;
+    height: 1.5rem;
+    position: absolute;
+    color: var(--branco);
+    right: 2.5%;
+}
+
 #header .btn-idioma select option{
     border: none;
 }
@@ -96,7 +106,7 @@
 }
 
 #header .btn-tema{
-    width: 40%;
+    width: 45%;
     height: 95%;
     background-color: var(--azul);
     border-radius: 100px;
@@ -127,6 +137,9 @@
 #header .logo{
     width: 20%;
     height: 95%;
+    position: absolute;
+    right: 50%;
+    left: 50%;
     transform: translateX(-50%);
 }
 
@@ -170,8 +183,18 @@ main #banner-inicial, main #sobre{
     position: relative;
     background-color: #fff;
 }
+main #banner-inicial .banner{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+    z-index: 0;
+}
 main #banner-inicial{
-    background-image: url('../assets/images/Banner-Shaolin.jpg');
+    background-image: url('../assets/images/Banner-inicio.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 main #banner-inicial .intro{
@@ -195,19 +218,19 @@ main #banner-inicial .intro .titulo{
 }
 main #banner-inicial .intro .titulo h1{
     font-size: 1.8rem;
-    color: var(--branco);
+    color: var(--cinza);
     font-weight: 300;
 }
 main #banner-inicial .intro .titulo hr{
     width: 50%;
     margin-left: 1rem;
-    border: 1px solid var(--branco);
+    border: 1px solid var(--cinza);
     /* transition: all 0.5s; */
     animation: hr-move 10s infinite alternate;
 }
 main #banner-inicial .intro .slogan p{
     font-size: 3.2rem;
-    color: var(--branco);
+    color: var(--cinza);
     font-weight: 600;
 }
 main #banner-inicial .intro .slogan p:nth-child(1){
@@ -226,11 +249,13 @@ main #banner-inicial .redes{
     position: absolute;
     bottom: 5%;
     right: 3%;
+    z-index: 2;
 }
 main #banner-inicial .redes a{
-    opacity: 0.5;
+    opacity: 1;
     transition: all 0.3s;
     position: relative;
+    filter: brightness(0);
     animation: horizontal-float 2s infinite alternate;
 }
 main #banner-inicial .redes a:hover{
@@ -281,7 +306,7 @@ main #banner-inicial .redes a:hover{
 
 /* SESSÃO SOBRE */
 main #sobre{
-    height: 228vh;
+    height: fit-content;
     display: flex;
     align-items: center;
     justify-content: start;
@@ -296,7 +321,6 @@ main #sobre article {
     justify-content: center;
     flex-direction: column;
     gap: 4rem;
-    /* padding: 3rem; */
 }
 main #sobre article .paragrafos{
     display: flex;
@@ -340,8 +364,7 @@ main #sobre article .texto-sobre:nth-child(2){
 }
 main #sobre .equipe{
     width: 100%;
-    height: 35%;
-    /* border: 1px solid var(--amarelo); */
+    height: 550px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -357,18 +380,8 @@ main #sobre .equipe .membros{
     gap: 1%;
     /* overflow: hidden; */
     flex-wrap: nowrap;
-    overflow-x:scroll;
     padding: 1rem;  
     position: relative;  
-}
-main #sobre .equipe .membros::-webkit-scrollbar{
-    height: 0.5rem;
-}
-main #sobre .equipe .membros::-webkit-scrollbar-track{
-    background-color: var(--cinza);
-}
-main #sobre .equipe .membros::-webkit-scrollbar-thumb{
-    background-color: var(--azul);
 }
 main #sobre .equipe .membros .membro{
     width: 20%;
@@ -428,6 +441,28 @@ main #sobre .equipe .membros .membro p{
     text-align: center;
     width: 70%;
 }
+main #sobre .equipe .botoes-equipe{
+    display:flex;
+    gap: 1.5rem;
+}
+main #sobre .equipe .botoes-equipe button{
+    width: 2rem;
+    height: 2rem;
+    border-radius:50%;
+    border: 1px solid var(--verde-florescente);
+    background:white;
+    color: var(--cinza);
+    cursor:pointer;
+    font-size: 1rem;
+    transition:.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+main #sobre .equipe .botoes-equipe button:hover{
+    background: var(--verde-florescente);
+    color: var(--branco);
+}
 
 main #sobre .pilares-cultura{
     width: 100%;
@@ -444,13 +479,13 @@ main #sobre .pilares-cultura h2{
 main #sobre .pilares-cultura .pilares-grid{
     display: grid;
     grid-template-columns: 45% 55%;
-    gap: 15px;
+    gap: 1rem;
 }
 
 main #sobre .pilares-cultura .pilares-esquerda{
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 1rem;
 }
 
 main #sobre .pilares-cultura .pilares-grid .card-pilar:hover, 
@@ -461,7 +496,7 @@ main #sobre .pilares-cultura .pilares-grid .card-info:hover{
 }
 
 main #sobre .pilares-cultura .pilares-grid .card-pilar{
-    background: #bfd4bb;
+    background: var(--verde);
     padding: 20px 25px;
     display: flex;
     align-items: center;
@@ -485,7 +520,7 @@ main #sobre .pilares-cultura .card-pilar p{
 }
 
 main #sobre .pilares-cultura .card-info{
-    background: #efefef;
+    background: #F8F8F8;
     display: flex;
     align-items: center;
     padding: 20px 30px;
@@ -494,16 +529,12 @@ main #sobre .pilares-cultura .card-info{
 
 main #sobre .pilares-cultura .card-info .titulo{
     min-width: 180px;
-
     display: flex;
     justify-content: center;
     align-items: center;
-
     text-align: center;
-
     padding-right: 30px;
     margin-right: 30px;
-
     border-right: 1px solid var(--verde-florescente);
 }
 
@@ -525,7 +556,8 @@ main #sobre .pilares-cultura .card-info .texto p{
 
 main #sobre .pilares-cultura .card-largo{
     grid-column: 1 / 3;
-    height: 140%;
+    padding: 20px 30px;
+    height: 225px;
 }
 
 /* SESSAO SERVIÇOS */
@@ -533,43 +565,21 @@ main #sobre .pilares-cultura .card-largo{
     position: relative;
     background-color: #fff; 
     width: 100%;
-    height: 130vh;
+    height: 150vh;
     display: flex;
     align-items: center;
     justify-content: start;
     flex-direction: column;
 }
-/* .section-title {
-    font-size: 2.5rem;
-    color: #333;
-    background-color: #fff;
-    display: inline-block;
-    padding: 8px 20px;
-    margin-bottom: 40px;
-    border-radius: 4px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-} */
-.container {
-    width: 100%;
-    height: 30vh;
-    position: relative;
-    padding: 2rem 4rem 2rem 4rem;
-}
-.servicos-banner {
-    background-color: #000000; 
-    border-radius: 15px;      
-    width: 100%;     
-    height: 100%;          
-    text-align: center;
-    display: flex;
-    justify-content: center;
+.imagem-cabecalho-servico{
+    width: 340px;
+    height: 70%;
+    display:flex;
+    justify-content:center;
     align-items: center;
 }
-.servicos-banner h1 {
-    font-family: 'Afacad Flux', sans-serif; 
-    color: #ffffff;
-    font-size: 3rem;
-    font-weight: 500; 
+.imagem-cabecalho-servico img{
+    width: 110%;
 }
 .grade-servicos {
     position: relative;
@@ -643,15 +653,205 @@ main #sobre .pilares-cultura .card-largo{
     word-spacing: -1px;
 }
 
+/* PROJETOS */
+.projetos{
+    width:100%;
+    height: 150vh;
+    background: var(--branco);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.cabecalho-projetos,
+.cabecalho-servicos{
+    width:100%;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 3rem;
+}
+.imagem-cabecalho{
+    width: 350px;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+}
+.imagem-cabecalho img{
+    width: 100%;
+}
+.texto-cabecalho{
+    margin-right: 5%;
+}
+.texto-cabecalho-servico{
+    margin-left: 5%;
+}
+.texto-cabecalho h2,
+.texto-cabecalho-servico h2{
+    font-size: 3rem;
+    font-weight: 700;
+    color:var(--cinza);
+    margin-bottom:18px;
+}
+.texto-cabecalho span,
+.texto-cabecalho-servico span{
+    color:#0056FF;
+}
+
+.texto-cabecalho p,
+.texto-cabecalho-servico p{
+    font-size: 1.5rem;
+    color: var(--cinza);
+    text-align: justify;
+    width: 480px;
+}
+.grade-projetos{
+    width:100%;
+    height: 100vh;
+    padding: 2rem 1rem;
+    background: linear-gradient(to bottom, var(--verde),#AADEA6 54%,  #59E49B,  var(--verde-florescente));
+}
+.card-projeto{
+    width: 100%;
+    height: 100%;
+    background-color: var(--branco);
+    border-radius:4px;
+    padding: 2rem 1rem 0rem 1rem;
+    gap: 0rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.conteudo-card{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.informacoes-projeto{
+    width: 30%;
+    height: 100%;
+    position: relative;
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: space-between;
+}
+.informacoes-projeto article{
+    width: 100%;
+    height: 80%;
+    display:flex;
+    flex-direction:column;
+    align-items: start;
+    justify-content: start;
+    gap: 2.5rem;
+}
+.informacoes-projeto h3{
+    font-size: 2.25rem; 
+    color: var(--cinza);
+}
+.informacoes-projeto p{
+    width: 100%;
+    height: 100%;
+    text-align:justify;
+    font-size: 1rem;
+    color: var(--cinza);
+}
+.botao-visitar{
+    width:100%;
+    height: 3rem;
+    margin-top:35px;
+    background: var(--verde-florescente);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-decoration:none;
+    color: var(--branco);
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+    font-weight:700;
+    transition:.3s;
+}
+.botao-visitar:hover{
+    background: var(--verde-florescente);
+}
+
+.imagem-projeto{
+    width:70%;
+    height:100%;
+    background-color:  var(--cinza);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+}
+.imagem-projeto img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+.controles-projeto{
+    width: 100%;
+    height: 20%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content: center;
+    gap: 1.25rem;
+}
+.indicadores{
+    display:flex;
+    gap: 0.8rem;
+}
+.indicador{
+    width: 2.5rem;
+    height: 0.4rem;
+    background: var(--cinza);
+}
+.indicador.ativo{
+    background: var(--verde-florescente);
+}
+.botoes-carrossel{
+    display:flex;
+    gap: 1.5rem;
+}
+.botoes-carrossel button{
+    width: 2rem;
+    height: 2rem;
+    border-radius:50%;
+    border: 1px solid var(--verde-florescente);
+    background:white;
+    color: var(--cinza);
+    cursor:pointer;
+    font-size: 1rem;
+    transition:.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.botoes-carrossel button:hover{
+    background: var(--verde-florescente);
+    color: var(--branco);
+}
+
 /* CONTATO */
 .contato{
     width: 100%;
-    height: 150vh;
+    height: 165vh;
 }
 
 .banner-contato{
-    height:50vh;
-    background:url("../assets/images/Banner-shaolin.jpg") center/cover no-repeat;
+    height:65vh;
+    background-image:url("../assets/images/Banner-contato.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
     display:flex;
     justify-content:center;
     align-items:center;

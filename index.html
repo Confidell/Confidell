@@ -18,6 +18,10 @@
                     <option value="en">English</option>
                     <option value="es">Español</option>
                 </select>
+
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="select-arrow">
+                    <path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+                </svg>
             </div>
 
             <div class="btn-tema">
@@ -35,6 +39,8 @@
     <main>
         <!-- SESSÃO INICIAL - BANNER -->
         <section id="banner-inicial">
+
+            <!-- <img class="banner" src="./assets/images/Banner-inicio.jpg" alt="inicio"> -->
 
             <!-- TEXTO TITULO + SLOGAN -->
             <article class="intro">
@@ -129,6 +135,21 @@
                     </div>
 
                 </div>
+
+                <div class="botoes-equipe">
+
+                    <button id="anterior">
+
+                        &#10094;
+
+                    </button>
+
+                    <button id="proximo">
+
+                        &#10095;
+
+                    </button>
+                </div>
             </div>
 
             
@@ -202,10 +223,22 @@
         <!-- SESSAO SERVIÇOS -->
         <section class="sessao-servicos">
 
-            <div class="container">
-                <div class="servicos-banner">
-                    <!-- <h1>NOSSOS SERVIÇOS</h1> -->
+            <div class="cabecalho-servicos">
+
+                <div class="texto-cabecalho-servico">
+                    <h2>
+                        NOSSOS <span>SERVIÇOS</span>
+                    </h2>
+
+                    <p>
+                        Oferecemos os serviços mais requisitados e eficientes do mundo digital para você escolher.
+                    </p>
                 </div>
+
+                <div class="imagem-cabecalho-servico">
+                    <img src="./assets/images/Img-servicos.svg" alt="Serviços">
+                </div>
+
             </div>
                 
             <div class="grade-servicos">
@@ -263,7 +296,93 @@
 
             </div>
         </section>
-    
+
+        <!-- PROJETOS -->
+        <section class="projetos">
+
+            <div class="cabecalho-projetos">
+
+                <div class="imagem-cabecalho">
+                    <img src="./assets/images/Img-projetos.svg" alt="Projetos">
+                </div>
+
+                <div class="texto-cabecalho">
+                    <h2>
+                        NOSSOS <span>PROJETOS</span>
+                    </h2>
+
+                    <p>
+                        A Confidell é responsável pelo sucesso tecnológico de diversas
+                        marcas presentes do mercado.
+                    </p>
+                </div>
+            </div>
+
+            <div class="grade-projetos">
+
+                <div class="card-projeto">
+
+                    <div class="conteudo-card">
+
+                        <div class="informacoes-projeto">
+                           <article>
+                                <h3 id="titulo-projeto">
+                                    Título
+                                </h3>
+                                <p id="descricao-projeto">
+                                    DESCRIÇÃO DO PROJETO COLOCADA AQUI AAAAA AAAAAAAAAAA AAAAAAAAAAAAAAAA AAAAAAAAAAAAAA AAAAAAAAAAA
+                                </p>
+                           </article>
+
+                            <a
+                                href="#"
+                                class="botao-visitar"
+                                id="botao-projeto">
+
+                                Visitar
+
+                            </a>
+                        </div>
+
+                        <div class="imagem-projeto">
+
+                            <img
+                                id="imagem-projeto"
+                                src="./assets/imagens/projeto.png"
+                                alt="Projeto">
+
+                        </div>
+                    </div>
+
+                    <div class="controles-projeto">
+                        <div class="indicadores">
+
+                            <span class="indicador ativo"></span>
+                            <span class="indicador"></span>
+                            <span class="indicador"></span>
+
+                        </div>
+
+                        <div class="botoes-carrossel">
+
+                            <button id="anterior">
+
+                                &#10094;
+
+                            </button>
+
+                            <button id="proximo">
+
+                                &#10095;
+
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
         <!-- CONTATOS -->
         <section class="contato">
 
@@ -273,7 +392,7 @@
 
             <div class="titulo-contato">
 
-                <h2>ENTRANDO EM CONTATO VOCÊ PORERÁ</h2>
+                <h2>CONTATE-NOS PARA</h2>
 
                 <div class="adesivos-contato">
                     <p>CONTRATAR-NOS</p>
