@@ -84,8 +84,8 @@
     height: 100%;
     background-color: var(--cinza);
     border: none;
-    padding-left: 0.5rem;
-    font-size: 14px;
+    padding-left: 0.4rem;
+    font-size: 13px;
     font-weight: 500;
     color: var(--branco);
     outline: none;
@@ -1075,4 +1075,70 @@ main #sobre .pilares-cultura .card-largo{
 .redes-rodape a:hover{
     transform: scale(1.1);
     transition: 0.3s;
+}
+
+@media screen and (min-width:0px) and (max-width:767px)
+{
+    ::-webkit-scrollbar {
+        display: none;
+    }
+    #header{
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    /* ESTILOS BOTOES IDIOMA E TEMA */
+    #header .botoes {
+        width: 28%;
+        height: 28%;       
+    }
+    #header .btn-idioma .icone-idioma{
+        width: 23%;
+        padding: 0.28rem;
+    }
+    #header .btn-idioma select{
+        padding-left: 0.18rem;
+        font-size: 8px;
+        font-weight: 300;
+    }
+    #header .btn-idioma .select-arrow{
+        width: 1rem;
+        height: 1rem;
+        padding-left: 0.3rem; /* dar uma olhada dps */
+        position: absolute;
+        color: var(--branco);
+        right: 0;
+    }
+    #header .btn-tema{
+        width: 25%;
+        height: 95%;
+    }
+    #header .btn-tema .esfera{
+        width: 53%;
+        height: 100%;
+    }
+    #header .btn-tema .icone-tema{
+        width: 70%;
+        height: 70%;
+    }
+    
+    /* ESTILOS LOGO */
+    #header .logo{
+        width: 30%;
+        height: 97%;
+        transform: translateX(-35%); /* rever */
+    } 
+
+    /* ESTILOS MENU */
+    #header .menu{
+        width: 25px;
+        height: 35px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        cursor: pointer;
+        z-index: 102;
+    }
+
+
 }
