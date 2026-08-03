@@ -1192,5 +1192,82 @@ main #sobre .pilares-cultura .card-largo{
         margin: 16px;
     }
 
+    /* CONTEUDO PRINCIPAL */
+    /* SESSAO INICIAL */
+    main #inicio{
+        background-image: url('../assets/images/Banner-inicio.jpg');
+        background-position: 45% 0%;
+        background-size: 190%;
+    }
+    main #inicio{
+        width: 100%;
+        height: auto;
+        min-height: 50vh;
+        display: flex; 
+        justify-content: center;
+        padding-bottom: 8rem;
+        background-size: none;
+        background-position: none;
+        position: relative;
+        background-color: #fff;
+        z-index: 1;
+    }
+    main #inicio .intro{
+        position: static;
+        margin-right: 5rem;
+        margin-top: 23%;
+        margin-left: 1rem;
+        gap: 1.5rem;
+    }
+    main #inicio .intro .titulo h1{
+        font-size: 1rem;
+        color: var(--cinza);
+        font-weight: 400;
+    }
+    main #inicio .intro .slogan p{
+        font-size: 1.3rem;
+        font-weight: 600;
+    }
+    main #inicio .redes{
+        display: flex;
+        flex-direction: column;
+        gap: 0rem;
+        top: 60%;
+        right: 1.7%;
+    }
+    main #inicio .redes img{
+        width: 18px;
+        height: auto;
+    }
+    main #inicio .redes a{
+        animation: none;
+    }
 
+    /* SESSÃO SOBRE */
+    main #sobre{
+        flex-direction: column;
+        padding: 1.4rem;
+        padding-top: 0rem;
+        gap: 2rem;
+    }
+    main #sobre article .titulo-sessao, h1{
+        font-size: 1.7rem;
+    }
+    main #sobre h2{
+        font-size: 1.7rem;
+        color: var(--cinza);
+        font-weight: 600;
+    }   
+    main #sobre article .texto-sobre{
+        width: 100%;
+        font-size: 1.2rem;
+        color: var(--cinza); 
+        font-weight: 400;
+        text-align: center;
+    }
+    main #sobre article, .titulo-sessao{
+        gap: 1.3rem;
+    }
+    
+        
 }
