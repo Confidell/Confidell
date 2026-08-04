@@ -441,7 +441,7 @@ main #sobre .equipe .membros .membro{
     border-radius: 60px;
     cursor: pointer;
     position: relative;
-    transition: all 0.5s ease;
+    transition: all .5s ease;
     overflow: hidden;
 }
 main #sobre .equipe .membros .membro::before{
@@ -501,7 +501,7 @@ main #sobre .equipe .botoes-equipe button{
     color: var(--cinza);
     cursor:pointer;
     font-size: 1rem;
-    transition:.3s;
+    transition:0.3s;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -510,7 +510,6 @@ main #sobre .equipe .botoes-equipe button:hover{
     background: var(--verde-florescente);
     color: var(--branco);
 }
-
 main #sobre .pilares-cultura{
     width: 100%;
     height: fit-content;
@@ -518,11 +517,9 @@ main #sobre .pilares-cultura{
     display: flex;
     flex-direction: column;
 }
-
 main #sobre .pilares-cultura h2{
     text-align: center;
 }
-
 main #sobre .pilares-cultura .pilares-grid{
     display: grid;
     grid-template-columns: 45% 55%;
@@ -1268,6 +1265,35 @@ main #sobre .pilares-cultura .card-largo{
     main #sobre article, .titulo-sessao{
         gap: 1.3rem;
     }
-    
+    main #sobre .equipe{
+        width: 100%;
+        height: 500px;
+        display: flex;
+    }
+    main #sobre .equipe .membros{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        gap: 1%;
+        padding: 1rem;
+    }
+    main #sobre .equipe .membros .membro{
+        width: 90%;
+        height: 95%;
+        display: flex;
+        justify-content: center;
+        background-color: var(--verde);
+        flex-shrink: 90px;
+        border-radius: 60px;
+    }
+
+    main #sobre .equipe .membros .membro p{
+        font-size: 1.1rem;
+    }
+    main #sobre .equipe .botoes-equipe{
+        display:flex;
+        gap: 1.5rem;
+    }
         
 }
