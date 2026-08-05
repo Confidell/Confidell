@@ -510,6 +510,8 @@ main #sobre .equipe .botoes-equipe button:hover{
     background: var(--verde-florescente);
     color: var(--branco);
 }
+
+/* nossos pilares e cultura */
 main #sobre .pilares-cultura{
     width: 100%;
     height: fit-content;
@@ -530,6 +532,10 @@ main #sobre .pilares-cultura .pilares-esquerda{
     display: flex;
     flex-direction: column;
     gap: 1rem;
+}
+
+main #sobre .pilares-cultura #card-mobile{
+    display: none;
 }
 
 main #sobre .pilares-cultura .pilares-grid .card-pilar:hover, 
@@ -580,6 +586,10 @@ main #sobre .pilares-cultura .card-info .titulo{
     padding-right: 30px;
     margin-right: 30px;
     border-right: 1px solid var(--verde-florescente);
+}
+
+main #sobre .titulo-responsivo{
+    display: none;
 }
 
 main #sobre .pilares-cultura .card-info .titulo h3{
@@ -1295,5 +1305,102 @@ main #sobre .pilares-cultura .card-largo{
         display:flex;
         gap: 1.5rem;
     }
-        
+
+    /* nossos pilares e cultura */
+    main #sobre .pilares-cultura .pilares-grid{
+        display: flex;
+        grid-template-columns: 100%;
+        gap: 1rem;
+        flex-direction: column;
+    }
+
+    main #sobre .pilares-cultura .pilares-esquerda{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    main #sobre .pilares-cultura #card-mobile{
+        display: flex;
+    }
+    
+    main #sobre .pilares-cultura .pilares-grid .card-pilar{
+        gap: 20px;
+        height: 100px;
+    }
+
+    main #sobre .pilares-cultura .pilares-grid .card-pilar img{
+        width: 13%;
+        height: 65px;
+    }
+
+    main #sobre .pilares-cultura .card-pilar h3{
+        margin-bottom: 0px;
+        font-size: 1.1rem;
+        font-weight: 700;
+    }
+
+    main #sobre .pilares-cultura .card-pilar p{
+        font-size: 1rem;
+    }
+
+    main #sobre .pilares-cultura .card-info{
+        background: #F8F8F8;
+        display: flex;
+        align-items: center;
+        padding: 20px 30px;
+        transition: all 0.3s;
+        flex-direction: column;
+        height:;
+    }
+
+    main #sobre .pilares-cultura .card-info .titulo{
+        min-width: 0px;
+        display: none;
+    }
+
+    main #sobre .titulo-responsivo{
+        display: flex;
+        min-width: 0px;
+        justify-content: start;
+        align-items: start;
+        text-align: start;
+        padding: 0px;
+        right: 0 auto;
+        border-bottom: 1px solid var(--verde-florescente);
+    }
+
+    main #sobre .titulo-responsivo hr{
+        height: 30%;
+        width: 90%;
+    }
+
+    main #sobre .pilares-cultura .card-info .titulo-responsivo h3{
+        font-size: 1.2rem;
+        line-height: 1.2;
+        text-align: end ;
+        margin-right: 50px auto;
+    }
+
+    main #sobre .pilares-cultura .card-info .texto-responsivo{
+        flex: 13;
+        flex-direction: column;
+    }
+
+    main #sobre .pilares-cultura .card-info .texto p{
+        line-height: 1;
+        font-size: 0.5rem;
+        text-align: justify;
+    }
+
+    main #sobre .pilares-cultura .card-largo{
+        grid-column: none;
+        flex-direction: column;
+        padding: 20px 30px;
+        height: 225px;
+    }
+
+    .sessao-servicos {
+        display: none;
+    }
 }
