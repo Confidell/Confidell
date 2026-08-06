@@ -39,7 +39,7 @@ const gap = parseFloat(getComputedStyle(membros).gap);
 let indiceEquipe = 0;
 
 function atualizarEquipe(){
-    const larguraCard = cards[0].offsetWidth + (gap - 30);
+    const larguraCard = cards[0].offsetWidth + (gap - 0);
 
     membros.style.transform =
         `translateX(-${indiceEquipe * larguraCard}px)`;
@@ -47,7 +47,7 @@ function atualizarEquipe(){
 
 botaoProximoEquipe.addEventListener("click",()=>{
 
-    if(indiceEquipe < cards.length - 4){
+    if(indiceEquipe < cards.length - 1){
         indiceEquipe++;
     }
 
