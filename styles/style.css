@@ -1066,7 +1066,6 @@ main #sobre .pilares-cultura .card-largo{
 .informacoes {
     color: #fff;
     font-size: 1rem;
-    display: none;  /*Arrumar*/
 } 
 .links-rodape {
     display: flex;
@@ -1517,7 +1516,7 @@ main #sobre .pilares-cultura .card-largo{
     /*Sessão contato*/
     .contato{
         width: 100%;
-        height: 165vh;
+        height: fit-content;
     }
 
     .banner-contato{
@@ -1601,5 +1600,49 @@ main #sobre .pilares-cultura .card-largo{
     }
 
     /*Footer*/
+    .rodape {
+        width: 100%;
+        height: 20vh;
+        background: #F8F8F8;
+    }
+    .rodape-conteudo {
+        gap: 0rem;
+    }
+    .logo {
+        width: 70%;
+    }
+    .direitos {
+        font-size: 15px;
+    }
+    .rodape-inferior {
+        width: 100%;
+        height: 20%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #333;
+        padding: 0.4rem;
+    }
+    .informacoes {
+        color: #fff;
+        font-size: 0.6rem;
+        padding: 0 5rem 0rem 0rem;
+    } 
+    .links-rodape {
+        display: flex;
+        width: 55%;
+        gap: 1rem;
+    }
+    .links-rodape a{
+        color: var(--branco);
+        text-decoration: none;
+        font-size: 0.6rem;
+        transition: 0.3s;
+    }
+
+    .redes-rodape{
+        display: none;
+    }
+
 
 }
