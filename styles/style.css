@@ -1066,7 +1066,8 @@ main #sobre .pilares-cultura .card-largo{
 .informacoes {
     color: #fff;
     font-size: 1rem;
-}
+    display: none;  /*Arrumar*/
+} 
 .links-rodape {
     display: flex;
     gap: 1.7rem;
@@ -1179,9 +1180,9 @@ main #sobre .pilares-cultura .card-largo{
         display: flex;
     }
     .menubar{
-        width: 32%;
-        height: 17%;
-        transform: translateX(180%);
+        width: 40%;
+        height: 30%;
+        transform: translateX(250%);
         align-items: normal;
         border: var(--verde-florescente) solid 2px;
         border-top: none;
@@ -1195,7 +1196,7 @@ main #sobre .pilares-cultura .card-largo{
         justify-content: flex-start;
     }
     .open{
-        transform: translateX(80%)
+        transform: translateX(150%)
     }
     .menubar nav ul li a{
         font-size: 1.2rem;
@@ -1453,7 +1454,7 @@ main #sobre .pilares-cultura .card-largo{
         width: 100%;
     }
     .grade-projetos{
-        height: 90vh;
+        height: 60vh;
         padding: 1rem 1rem;
     }
     .card-projeto{
@@ -1537,6 +1538,8 @@ main #sobre .pilares-cultura .card-largo{
     .titulo-contato h2{
         font-size: 1.7rem;
         line-height: 1rem;
+        width: 100%;
+
     }
 
     .adesivos-contato{
@@ -1552,68 +1555,48 @@ main #sobre .pilares-cultura .card-largo{
 
     .informacoes-contato{
         width: 100%;
-        height: 50vh;
+        height: fit-content;
         display:flex;
         align-items: center;
-        justify-content: space-between;
-        padding:0 5rem;
+        justify-content: center;
+        padding: 1rem;
         background:#FCFCFC;
+        flex-direction: column;
     }
 
     .contato-esquerda,
     .contato-direita{
         display: flex;
-        flex-direction: column;
-        gap: 5rem;
+        gap: 1.5rem;
+        width: 100%;
+        padding-bottom: 1rem;
     }
 
     .contato-esquerda h3,
     .contato-direita h3{
-        font-size: 2.25rem;
-    }
-
-    .contato-esquerda span,
-    .contato-direita span{
-        color:#005CFF;
+        font-size: 1.7rem;
     }
 
     .item-contato h4,
     .horarios h4{
-        font-size: 18px;
+        font-size: 1.2rem;
         font-weight: 400;
         margin-left: 5px;
     }
     .item-contato{
         display: flex; 
-        gap: 5rem;
+        gap: 2rem;
     }
     .item-contato a{
-        font-size: 24px;
-        font-weight:bold;
-        color: #373737;
-        text-decoration: none;
-        position: relative;
-    }
-    .item-contato a::after{
-        content: '';
-        position: absolute;
-        width: 0%;
-        height: 1.5px;
-        bottom: 0;
-        left: 0;
-        background-color: var(--verde-florescente);
-        transition: width 0.3s ease-in-out;
-    }
-    .item-contato a:hover::after{
-        width: 100%;
+        font-size: 1rem;
     }
 
     .horarios{
         display:flex;
-        gap: 5rem;
+        gap: 2rem;
     }
     .horarios p{
-        font-size: 24px;
+        font-size: 1.2rem;
         font-weight:bold;
     }
 
