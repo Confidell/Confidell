@@ -6,7 +6,7 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'Afacad Flux', sans-serif;
-    /* border: 1px solid black; */
+    /* border: 1px solid black;  */
 }
 /* VARIÁVEIS DE ESTILO */
 :root{
@@ -831,6 +831,10 @@ main #sobre .pilares-cultura .card-largo{
     font-weight:700;
     transition:.3s;
 }
+
+.controles-projeto a{
+    display: none;
+}
 .botao-visitar:hover{
     background: var(--verde-florescente);
 }
@@ -847,7 +851,7 @@ main #sobre .pilares-cultura .card-largo{
 .imagem-projeto img{
     width:100%;
     height:100%;
-    object-fit: cover;
+    object-fit:fill;
 }
 .controles-projeto{
     width: 100%;
@@ -1085,13 +1089,18 @@ main #sobre .pilares-cultura .card-largo{
     transition: 0.3s;
 }
 
-@media screen and (min-width:0px) and (max-width:500px)
+@media screen and (max-width: 640px)
 {
     /* ESTILO DA SCROLLBAR */
     ::-webkit-scrollbar {
         display: none;
     }
+    body {
+        width: 100%;
+        overflow-x: hidden;
+    }
     #header{
+        width: 100%;
         height: 60px;
         display: flex;
         padding-left: 0.7rem;
@@ -1170,12 +1179,13 @@ main #sobre .pilares-cultura .card-largo{
         display: flex;
     }
     .menubar{
-        width: 60%;
-        height: 35%;
+        width: 32%;
+        height: 17%;
         transform: translateX(180%);
         align-items: normal;
         border: var(--verde-florescente) solid 2px;
         border-top: none;
+        overflow-x: hidden;
     }
     .menubar nav ul{
         margin-top: 25%;
@@ -1185,7 +1195,7 @@ main #sobre .pilares-cultura .card-largo{
         justify-content: flex-start;
     }
     .open{
-        transform: translateX(70%)
+        transform: translateX(80%)
     }
     .menubar nav ul li a{
         font-size: 1.2rem;
@@ -1277,8 +1287,9 @@ main #sobre .pilares-cultura .card-largo{
     }
     main #sobre .equipe{
         width: 100%;
-        height: 500px;
+        height: 550px;
         display: flex;
+        overflow: hidden;
     }
     main #sobre .equipe .membros{
         width: 100%;
@@ -1294,16 +1305,21 @@ main #sobre .pilares-cultura .card-largo{
         display: flex;
         justify-content: center;
         background-color: var(--verde);
-        flex-shrink: 90px;
+        flex-shrink: 0;
         border-radius: 60px;
     }
 
     main #sobre .equipe .membros .membro p{
         font-size: 1.1rem;
     }
+
     main #sobre .equipe .botoes-equipe{
         display:flex;
         gap: 1.5rem;
+    }
+    main #sobre .equipe .botoes-equipe button{
+        width: 1.5rem;
+        height: 1.5rem;
     }
 
     /* nossos pilares e cultura */
@@ -1325,12 +1341,12 @@ main #sobre .pilares-cultura .card-largo{
     }
     
     main #sobre .pilares-cultura .pilares-grid .card-pilar{
-        gap: 20px;
+        gap: 10px;
         height: 100px;
     }
 
     main #sobre .pilares-cultura .pilares-grid .card-pilar img{
-        width: 13%;
+        width: 10%;
         height: 65px;
     }
 
@@ -1347,15 +1363,13 @@ main #sobre .pilares-cultura .card-largo{
     main #sobre .pilares-cultura .card-info{
         background: #F8F8F8;
         display: flex;
-        align-items: center;
-        padding: 20px 30px;
+        align-items: start;
+        padding: 5px 15px;
         transition: all 0.3s;
         flex-direction: column;
-        height:;
     }
 
     main #sobre .pilares-cultura .card-info .titulo{
-        min-width: 0px;
         display: none;
     }
 
@@ -1366,8 +1380,7 @@ main #sobre .pilares-cultura .card-largo{
         align-items: start;
         text-align: start;
         padding: 0px;
-        right: 0 auto;
-        border-bottom: 1px solid var(--verde-florescente);
+        border-bottom: 0px solid var(--verde-florescente);
     }
 
     main #sobre .titulo-responsivo hr{
@@ -1377,7 +1390,7 @@ main #sobre .pilares-cultura .card-largo{
 
     main #sobre .pilares-cultura .card-info .titulo-responsivo h3{
         font-size: 1.2rem;
-        line-height: 1.2;
+        line-height: 2;
         text-align: end ;
         margin-right: 50px auto;
     }
@@ -1388,19 +1401,118 @@ main #sobre .pilares-cultura .card-largo{
     }
 
     main #sobre .pilares-cultura .card-info .texto p{
-        line-height: 1;
-        font-size: 0.5rem;
+        line-height: 1.2;
+        font-size: 0.9rem;
         text-align: justify;
     }
 
     main #sobre .pilares-cultura .card-largo{
         grid-column: none;
         flex-direction: column;
-        padding: 20px 30px;
-        height: 225px;
+        padding: 5px 15px;
+        height: fit-content;
     }
 
     .sessao-servicos {
         display: none;
     }
+    /* Sessão projetos */
+    .projetos{
+        width:100%;
+        height: 70vh;
+        background: var(--branco);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .cabecalho-projetos{
+        width:100%;
+        height: 50vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px 0rem;
+    }
+    .imagem-cabecalho{
+        display:none;
+
+    }
+    .texto-cabecalho{
+        margin-right: 0%;
+    }
+    .texto-cabecalho h2{
+        font-size: 1.7rem;
+        text-align: center;
+        margin-bottom: 18px;
+    }
+    .texto-cabecalho p{
+        font-size: 0.9rem;
+        color: var(--cinza);
+        text-align: center;
+        width: 100%;
+    }
+    .grade-projetos{
+        height: 90vh;
+        padding: 1rem 1rem;
+    }
+    .card-projeto{
+        width: 100%;
+        height: 100%;
+        background-color: var(--branco);
+        border-radius:4px;
+        padding: 0rem 0rem 0rem 0rem;
+        gap: 1rem;
+        display: flex;
+    }
+    .informacoes-projeto{
+        display:none;
+    }
+
+    .indicadores{
+        display: none;
+    }
+
+    .controles-projeto a{
+        display: flex;
+    }
+    .controles-projeto{
+        display: flex;
+        gap: 0.8rem;
+        height: 10vh;
+    }
+
+    .botao-visitar-responsivo{
+        width: 85%;
+        height: 2rem;
+        background: var(--verde-florescente);
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        text-decoration:none;
+        color: var(--branco);
+        font-size: 1.2rem;
+        letter-spacing: 1px;
+        font-weight:700;
+        transition:.3s;
+    }
+
+    .botoes-carrossel button{
+        width: 1.5rem;
+        height: 1.5rem;
+        margin-bottom: 10px;
+    }
+
+    .imagem-projeto{
+        width:100%;
+    }
+
+    .imagem-projeto img{
+        width:100%;
+        height:100%;
+        object-fit:contain;
+    }
+
+    /*Sessão contato*/
+
 }
