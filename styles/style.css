@@ -1179,23 +1179,27 @@ main #sobre .pilares-cultura .card-largo{
         display: flex;
     }
     .menubar{
-        width: 40%;
-        height: 30%;
-        transform: translateX(250%);
+        width: 55%;
+        height: 23%;
+        transform: translateX(185%);
         align-items: normal;
         border: var(--verde-florescente) solid 2px;
         border-top: none;
         overflow-x: hidden;
     }
     .menubar nav ul{
-        margin-top: 25%;
+        margin-top: 27%;
         gap: 1.2rem;
         flex-direction: column;
         align-items: normal;
         justify-content: flex-start;
     }
+
+    .menubar li:nth-child(3) {
+        display: none;
+}
     .open{
-        transform: translateX(150%)
+        transform: translateX(82%)
     }
     .menubar nav ul li a{
         font-size: 1.2rem;
@@ -1232,17 +1236,17 @@ main #sobre .pilares-cultura .card-largo{
     main #inicio .intro{
         position: static;
         margin-right: 5rem;
-        margin-top: 23%;
+        margin-top: 27%;
         margin-left: 1rem;
         gap: 1.5rem;
     }
     main #inicio .intro .titulo h1{
-        font-size: 1rem;
+        font-size: 1.2rem;
         color: var(--cinza);
         font-weight: 400;
     }
     main #inicio .intro .slogan p{
-        font-size: 1.3rem;
+        font-size: 26.2px;
         font-weight: 600;
     }
     main #inicio .redes{
@@ -1287,7 +1291,7 @@ main #sobre .pilares-cultura .card-largo{
     }
     main #sobre .equipe{
         width: 100%;
-        height: 550px;
+        height: 570px;
         display: flex;
         overflow: hidden;
     }
@@ -1319,7 +1323,8 @@ main #sobre .pilares-cultura .card-largo{
     }
     main #sobre .equipe .botoes-equipe button{
         width: 1.5rem;
-        height: 1.5rem;
+        height: 1.5rem; 
+        margin-bottom: 20%;
     }
 
     /* nossos pilares e cultura */
@@ -1376,11 +1381,31 @@ main #sobre .pilares-cultura .card-largo{
     main #sobre .titulo-responsivo{
         display: flex;
         min-width: 0px;
-        justify-content: start;
-        align-items: start;
+        justify-content: space-between;
+        align-items: center;
         text-align: start;
         padding: 0px;
         border-bottom: 0px solid var(--verde-florescente);
+        width: 100%;
+    }
+
+    main #sobre .seta {
+        display: flex;
+        width: 1.3rem;
+        transition: transform 0.3s ease; 
+    }
+
+    main #sobre .pilares-cultura .card-info.active .texto {
+        max-height: 200px; 
+    }
+
+    main #sobre .pilares-cultura .card-info.active .seta {
+        transform: rotate(180deg);
+    }
+
+    main #sobre .titulo-responsivo .seta{
+        justify-content: space-between;
+        align-items: end;
     }
 
     main #sobre .titulo-responsivo hr{
@@ -1406,6 +1431,12 @@ main #sobre .pilares-cultura .card-largo{
         text-align: justify;
     }
 
+    main #sobre .pilares-cultura .card-info .texto {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease-out;
+    }
+
     main #sobre .pilares-cultura .card-largo{
         grid-column: none;
         flex-direction: column;
@@ -1428,11 +1459,11 @@ main #sobre .pilares-cultura .card-largo{
     }
     .cabecalho-projetos{
         width:100%;
-        height: 50vh;
+        height: 32vh;
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 20px 0rem;
+        padding: 0px 1rem;
     }
     .imagem-cabecalho{
         display:none;
@@ -1440,17 +1471,19 @@ main #sobre .pilares-cultura .card-largo{
     }
     .texto-cabecalho{
         margin-right: 0%;
+        margin-bottom: 23px;
     }
     .texto-cabecalho h2{
         font-size: 1.7rem;
         text-align: center;
-        margin-bottom: 18px;
+        margin-bottom: 0px;
     }
     .texto-cabecalho p{
         font-size: 0.9rem;
         color: var(--cinza);
         text-align: center;
         width: 100%;
+        padding: 1rem;
     }
     .grade-projetos{
         height: 60vh;
@@ -1479,7 +1512,7 @@ main #sobre .pilares-cultura .card-largo{
     .controles-projeto{
         display: flex;
         gap: 0.8rem;
-        height: 10vh;
+        height: 13vh;
     }
 
     .botao-visitar-responsivo{
@@ -1520,10 +1553,10 @@ main #sobre .pilares-cultura .card-largo{
     }
 
     .banner-contato{
-        height: 40vh;
+        height: 25vh;
         background-image:url("../assets/images/Banner-contato.jpg");
-        background-position: -190% 35%;
-        background-size: 90%;
+        background-position: 50% 50%;
+        background-size: 140%;
         background-attachment: fixed;
         display:flex;
         justify-content:center;
@@ -1592,7 +1625,8 @@ main #sobre .pilares-cultura .card-largo{
 
     .horarios{
         display:flex;
-        gap: 2rem;
+        gap: 3.6rem;
+        padding-left: 2px;
     }
     .horarios p{
         font-size: 1.2rem;
@@ -1616,7 +1650,7 @@ main #sobre .pilares-cultura .card-largo{
     }
     .rodape-inferior {
         width: 100%;
-        height: 20%;
+        height: 30%;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -1625,8 +1659,8 @@ main #sobre .pilares-cultura .card-largo{
     }
     .informacoes {
         color: #fff;
-        font-size: 0.6rem;
-        padding: 0 5rem 0rem 0rem;
+        font-size: 0.7rem;
+        padding: 0 3rem 0rem 0rem;
     } 
     .links-rodape {
         display: flex;
@@ -1636,7 +1670,7 @@ main #sobre .pilares-cultura .card-largo{
     .links-rodape a{
         color: var(--branco);
         text-decoration: none;
-        font-size: 0.6rem;
+        font-size: 0.7rem;
         transition: 0.3s;
     }
 

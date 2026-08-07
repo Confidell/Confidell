@@ -62,3 +62,14 @@ botaoAnteriorEquipe.addEventListener("click",()=>{
 
     atualizarEquipe();
 });
+
+//Pilares e Cultura
+const headersResponsivos = document.querySelectorAll('main #sobre .pilares-cultura .titulo-responsivo');
+
+headersResponsivos.forEach(header => {
+    header.addEventListener('click', () => {
+        const card = header.closest('.card-info');
+        
+        card.classList.toggle('active');
+    });
+});
