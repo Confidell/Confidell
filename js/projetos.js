@@ -13,21 +13,21 @@ const projetos = [
         titulo: "Belle Couture",
         descricao:
         "Sistema web desenvolvido para gerenciamento de pedidos de uma cafeteria.",
-        imagem: "../assets/images/Belle-couture.jpg",
+        imagem: "./assets/images/Belle-couture.jpg",
         link: "https://luizaraujo-faria.github.io/Belle-Couture/index.html"
     },
     {
         titulo: "World Speed",
         descricao:
         "Site institucional desenvolvido utilizando HTML, CSS e JavaScript.",
-        imagem: "../assets/images/World-speed.jpg",
+        imagem: "./assets/images/World-speed.jpg",
         link: "https://luizaraujo-faria.github.io/World-Speed/index.html"
     },
     {
         titulo: "Cine Comédia",
         descricao:
         "Controle de acesso utilizando ESP32 e leitores RFID.",
-        imagem: "../assets/images/Cine-comedia.jpg",
+        imagem: "./assets/images/Cine-comedia.jpg",
         link: "https://luizaraujo-faria.github.io/Cine-Comedia/index.html"
     },
         {
