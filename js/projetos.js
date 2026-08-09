@@ -2,6 +2,7 @@ const tituloProjeto = document.getElementById("titulo-projeto");
 const descricaoProjeto = document.getElementById("descricao-projeto");
 const imagemProjeto = document.getElementById("imagem-projeto");
 const botaoProjeto = document.getElementById("botao-projeto");
+const botaoProjetoResponsivo = document.getElementById("botao-projeto-responsivo");
 const anteriorProjeto = document.getElementById("anterior-proj");
 const proximoProjeto = document.getElementById("proximo-proj");
 const indicadores = document.querySelector(".indicadores");
@@ -73,6 +74,7 @@ function atualizarProjeto(){
     descricaoProjeto.textContent = projeto.descricao;
     imagemProjeto.src = projeto.imagem;
     botaoProjeto.href = projeto.link;
+    botaoProjetoResponsivo.href = projeto.link;
 
     document
         .querySelectorAll(".indicador")
