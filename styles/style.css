@@ -457,9 +457,9 @@ main #sobre .equipe .membros .membro::before{
 main #sobre .equipe .membros .membro:hover::before{
     opacity: 0.2;
 }
-main #sobre .equipe .membros .membro:hover p{
+/* main #sobre .equipe .membros .membro:hover p{
     color: #1e1e1e;
-}
+} */
 /* Quando existir algum membro em hover */
 main #sobre .equipe .membros:has(.membro:hover) .membro{
     filter: blur(3px) brightness(0.7);
