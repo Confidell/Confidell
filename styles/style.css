@@ -1182,7 +1182,7 @@ main #sobre .pilares-cultura .card-largo{
     }
     .menubar{
         width: 55%;
-        height: 23%;
+        height: 29%;
         transform: translateX(185%);
         align-items: normal;
         border: var(--verde-florescente) solid 2px;
@@ -1225,7 +1225,7 @@ main #sobre .pilares-cultura .card-largo{
     main #inicio{
         width: 100%;
         height: auto;
-        min-height: 70vh;
+        min-height: 55vh;
         display: flex; 
         justify-content: center;
         padding-bottom: 8rem;
