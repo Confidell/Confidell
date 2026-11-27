@@ -10,38 +10,38 @@ let indiceProjeto = 0;
 
 const projetos = [
     {
+        titulo: "Ecommerce Discoffee",
+        descricao:
+        "Discoffee é uma plataforma de e-commerce voltada ao segmento de cafeterias, desenvolvida para proporcionar uma experiência completa de compra online. O projeto permite explorar o catálogo de produtos, personalizar bebidas, adicionar itens ao carrinho e realizar pedidos, contando com funcionalidades de gerenciamento de usuários, produtos e pedidos.",
+        imagem: "./assets/images/Discoffee.png",
+        link: "#"
+    },
+    {
         titulo: "Belle Couture",
         descricao:
-        "Sistema web desenvolvido para gerenciamento de pedidos de uma cafeteria.",
+        "Belle Couture é uma loja virtual de moda de grife, desenvolvida para apresentar peças de vestuário e destacar coleções de roupas com elegância e sofisticação. O site busca proporcionar uma experiência de navegação intuitiva, permitindo explorar os produtos e conhecer melhor as opções disponíveis, combinando uma identidade visual refinada com uma apresentação moderna.",
         imagem: "./assets/images/Belle-couture.jpg",
         link: "https://luizaraujo-faria.github.io/Belle-Couture/index.html"
     },
     {
         titulo: "World Speed",
         descricao:
-        "Site institucional desenvolvido utilizando HTML, CSS e JavaScript.",
+        "World Speed é um site informativo dedicado ao Autódromo José Carlos Pace, popularmente conhecido como Autódromo de Interlagos. O projeto apresenta informações sobre a história do circuito, suas características e sua importância para o automobilismo nacional e internacional. A proposta é explorar o universo das corridas e proporcionar aos visitantes uma experiência informativa sobre um dos principais palcos do automobilismo brasileiro.",
         imagem: "./assets/images/World-speed.jpg",
         link: "https://luizaraujo-faria.github.io/World-Speed/index.html"
     },
     {
         titulo: "Cine Comédia",
         descricao:
-        "Controle de acesso utilizando ESP32 e leitores RFID.",
+        "Cine Comédia é um site informativo dedicado ao gênero cinematográfico de comédia, explorando sua história, evolução e características ao longo do tempo. O projeto apresenta informações sobre diferentes estilos de humor, elementos que definem o gênero e sua influência na indústria cinematográfica, proporcionando aos visitantes uma visão mais ampla sobre o universo dos filmes de comédia.",
         imagem: "./assets/images/Cine-comedia.jpg",
         link: "https://luizaraujo-faria.github.io/Cine-Comedia/index.html"
     },
-        {
-        titulo: "a",
+    {
+        titulo: "Lethal Walker",
         descricao:
-        "a.",
-        imagem: "./assets/imagens/rfid.png",
-        link: "#"
-    },
-        {
-        titulo: "b",
-        descricao:
-        "b.",
-        imagem: "./assets/imagens/rfid.png",
+        "Lethal Walker é um jogo de fantasia que mistura elementos de ritmo e estética cinematográfica. Inspirado musicalmente no filme Soul (2020) e narrativamente em Malasartes e o Duelo com a Morte (2017), o jogo acompanha Poe Walker, um vigarista que, ao envelhecer, se vê perseguido pela própria Morte. Seu objetivo é fugir e despistá-la, utilizando suas habilidades e esperteza para escapar de seu destino e continuar vivendo.",
+        imagem: "./assets/images/Letal-Walker.jpeg",
         link: "#"
     }
 ];
