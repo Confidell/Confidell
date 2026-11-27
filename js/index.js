@@ -35,35 +35,108 @@ const cards = document.querySelectorAll(".membro");
 const botaoAnteriorEquipe = document.getElementById("anterior-equipe");
 const botaoProximoEquipe = document.getElementById("proximo-equipe");
 const gap = parseFloat(getComputedStyle(membros).gap);
+const mediaQuery = window.matchMedia("(width: 640px)");
 
 let indiceEquipe = 0;
 
-function atualizarEquipe(){
-    const larguraCard = cards[0].offsetWidth + (gap - 0);
+function atualizarEquipe() {
 
-    membros.style.transform =
-        `translateX(-${indiceEquipe * larguraCard}px)`;
+    const container = membros.parentElement;
+
+    const cardAtual = cards[indiceEquipe];
+
+    // MOBILE
+    if (mediaQuery.matches) {
+
+        if (indiceEquipe === 0) {
+
+            membros.style.transform = "translateX(0)";
+
+            return;
+        }
+
+        const posicaoCard = cardAtual.offsetLeft;
+
+        const centralizacao =
+            (container.clientWidth - cardAtual.offsetWidth) / 2;
+
+        const deslocamento =
+            posicaoCard - centralizacao;
+
+        membros.style.transform =
+            `translateX(-${deslocamento}px)`;
+
+    } else {
+        // DESKTOP
+        const gap =
+            parseFloat(getComputedStyle(membros).gap);
+
+        const larguraCard =
+            cardAtual.offsetWidth;
+
+        const passo =
+            larguraCard + gap;
+
+        const deslocamentoMaximo =
+            membros.scrollWidth - container.clientWidth;
+
+        let deslocamento =
+            indiceEquipe * passo;
+
+        deslocamento =
+            Math.min(
+                deslocamento,
+                deslocamentoMaximo
+            );
+
+        membros.style.transform =
+            `translateX(-${deslocamento}px)`;
+    }
 }
 
-botaoProximoEquipe.addEventListener("click",()=>{
+// PRÓXIMO
+botaoProximoEquipe.addEventListener("click", () => {
 
-    if(indiceEquipe < cards.length - 1){
+    if (indiceEquipe < cards.length - 1) {
+
         indiceEquipe++;
-    }
 
-    atualizarEquipe();
+        atualizarEquipe();
+    }
 });
 
-botaoAnteriorEquipe.addEventListener("click",()=>{
+// ANTERIOR
+botaoAnteriorEquipe.addEventListener("click", () => {
 
-    if(indiceEquipe > 0){
+    if (indiceEquipe > 0) {
+
         indiceEquipe--;
+
+        atualizarEquipe();
     }
+});
+
+
+// RESPONSIVIDADE
+mediaQuery.addEventListener("change", () => {
+
+    indiceEquipe = 0;
 
     atualizarEquipe();
 });
 
-//Pilares e Cultura
+
+// REDIMENSIONAMENTO
+window.addEventListener("resize", () => {
+
+    atualizarEquipe();
+});
+
+
+// INICIALIZAÇÃO
+atualizarEquipe();
+
+//PILARES E CULTURA
 const headersResponsivos = document.querySelectorAll('main #sobre .pilares-cultura .titulo-responsivo');
 
 headersResponsivos.forEach(header => {
